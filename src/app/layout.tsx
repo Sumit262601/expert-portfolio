@@ -11,9 +11,9 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sumit Kumar | Portfolio",
+  title: "Sumit | Portfolio",
   description:
-    "Discover Sumit's front-end developer portfolio featuring innovative projects, modern web technologies, and a passion for clean, user-friendly design. Explore expertise in React, Next.js, Tailwind CSS, and more.",
+    "Sumit's front-end developer portfolio featuring innovative projects, modern web technologies, and a passion for clean, user-friendly design. Explore expertise in React, Next.js, Tailwind CSS, and more.",
   keywords: [
     "Front-End Developer",
     "Web Developer",
@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     "JavaScript Developer",
     "Responsive Web Design",
   ],
-  authors: [{ name: "Sumit", url: "https://sumit.vercel.app/" }],
+  authors: [{ name: "SumitxDev", url: "https://expert-portfolio.vercel.app/" }],
   openGraph: {
-    title: "Sumit | Front-End Developer Portfolio",
+    title: "Sumit's Portfolio",
     description:
       "Explore Sumit's cutting-edge front-end development projects, utilizing modern frameworks like React, Next.js, and Tailwind CSS.",
-    url: "https://sumit.vercel.app/",
-    siteName: "Sumit Portfolio",
+    url: "https://expert-portfolio.vercel.app/",
+    siteName: "Sumit | Portfolio",
     images: [
       {
-        url: "https://sumit.vercel.app/preview.png",
+        url: "https://expert-portfolio.vercel.app/preview.png",
         width: 1200,
         height: 630,
         alt: "Sumit Portfolio Preview",

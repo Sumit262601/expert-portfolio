@@ -1,9 +1,9 @@
 
-# Elhussary | Personal Portfolio Website & Blog
+# Sumit | Personal Portfolio Website & Blog
 
-🚀 **[Visit the Site](https://elhussary.vercel.app/)**  
+🚀 **[Visit the Site](https://expert-portfolio.vercel.app/)**  
 
-Elhussary is a personal portfolio website showcasing projects, a blog, and other technical content. Built with **Next.js** and **Tailwind CSS**, it delivers a fast and responsive experience.
+Sumit is a personal portfolio website showcasing projects, a blog, and other technical content. Built with **Next.js** and **Tailwind CSS**, it delivers a fast and responsive experience.
 
 ---
 
@@ -23,7 +23,7 @@ Elhussary is a personal portfolio website showcasing projects, a blog, and other
 ## 🔧 **Setup & Installation**
 1. **Clone the Repository**  
    ```sh
-   git clone https://github.com/elhussary/portfolio.git
+   git clone https://github.com/Sumit262601/expert-portfolio.git
    cd portfolio
    ```
 2. **Install Dependencies**  
@@ -40,10 +40,9 @@ Elhussary is a personal portfolio website showcasing projects, a blog, and other
 ---
 
 ### 🔗 **Connect with Me**
-- Website: [elhussary.vercel.app](https://elhussary.vercel.app/)  
-- Twitter: [@elhussaryy](https://X.com/elhussaryy)  
-- LinkedIn: [Ahmed Wael](https://www.linkedin.com/in/elhussary2003)  
+- Website: [Sumit.Portfolio](https://expert-portfolio.vercel.app/)  
+- LinkedIn: [Sumit Kumar](https://www.linkedin.com/in/sumit-k-bb4381250/)  
 
 ---
 
-**Made with ❤️ by Elhussary**  
+**Made with ❤️ by Sumit**  
