@@ -36,7 +36,7 @@ const BlogCard = (blogCard: BlogCardProps) => {
           <p>Published on {blogCard.publishedOn}</p>
           <Avatar className="w-7 h-7">
             <AvatarImage src="/favicon.ico" alt="Aut" />
-            <AvatarFallback>AU</AvatarFallback>
+            <AvatarFallback>Sk</AvatarFallback>
           </Avatar>
         </CardFooter>
       </Card>

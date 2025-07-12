@@ -1,5 +1,4 @@
 import { Marquee } from "@/components/magicui/marquee";
-
 import { Star } from "lucide-react";
 import Image from "next/image";
 

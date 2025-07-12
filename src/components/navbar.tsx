@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-2">
           <Link className="flex items-center mr-6" href="/">
             <span className="font-bold">
-              <AnimatedGradientText>Ahmed Wael</AnimatedGradientText>
+              <AnimatedGradientText>Sumit Kumar</AnimatedGradientText>
             </span>
           </Link>
 

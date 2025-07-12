@@ -11,44 +11,32 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Elhussary | Portfolio",
+  title: "Sumit Kumar | Portfolio",
   description:
-    "Discover Elhussary's front-end developer portfolio featuring innovative projects, modern web technologies, and a passion for clean, user-friendly design. Explore expertise in React, Next.js, Tailwind CSS, and more.",
+    "Discover Sumit's front-end developer portfolio featuring innovative projects, modern web technologies, and a passion for clean, user-friendly design. Explore expertise in React, Next.js, Tailwind CSS, and more.",
   keywords: [
     "Front-End Developer",
     "Web Developer",
     "React Developer",
-    "Next.js Portfolio",
     "JavaScript Developer",
-    "UI/UX Design",
     "Responsive Web Design",
-    "Tailwind CSS",
-    "Web Development Projects",
-    "Modern Web Technologies",
   ],
-  authors: [{ name: "Elhussary", url: "https://elhussary.vercel.app/" }],
+  authors: [{ name: "Sumit", url: "https://sumit.vercel.app/" }],
   openGraph: {
-    title: "Elhussary | Front-End Developer Portfolio",
+    title: "Sumit | Front-End Developer Portfolio",
     description:
-      "Explore Elhussary's cutting-edge front-end development projects, utilizing modern frameworks like React, Next.js, and Tailwind CSS.",
-    url: "https://elhussary.vercel.app/",
-    siteName: "Elhussary Portfolio",
+      "Explore Sumit's cutting-edge front-end development projects, utilizing modern frameworks like React, Next.js, and Tailwind CSS.",
+    url: "https://sumit.vercel.app/",
+    siteName: "Sumit Portfolio",
     images: [
       {
-        url: "https://elhussary.vercel.app/preview.png",
+        url: "https://sumit.vercel.app/preview.png",
         width: 1200,
         height: 630,
-        alt: "Elhussary Portfolio Preview",
+        alt: "Sumit Portfolio Preview",
       },
     ],
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Elhussary | Front-End Developer Portfolio",
-    description:
-      "Showcasing innovative web projects using React, Next.js, and modern UI/UX practices.",
-    images: ["https://elhussary.vercel.app/preview.png"],
   },
   robots: "index, follow",
 };

@@ -13,55 +13,37 @@ interface TechStackProps {
 // Back-End
 const backEndTech = [
   { name: "PHP", slug: "php" },
-  { name: "Node.js", slug: "nodedotjs" },
   { name: "MySQL", slug: "mysql" },
   { name: "MongoDB", slug: "mongodb" },
-  // { name: "C++", slug: "c++" },
-  // { name: "Laravel", slug: "laravel" },
   { name: "Express", slug: "express" },
-  { name: "Postgresql", slug: "postgresql" },
-  // { name: "GraphQL", slug: "graphql" },
-  // { name: "Wordpress", slug: "wordpress" },
-  // { name: "Socket.io", slug: "socketdotio" },
+  { name: "Node.js", slug: "nodedotjs" },
+  { name: "PostgreSQL", slug: "postgresql" },
 ];
 
 // Front-End Tech
 const frontEndTech = [
-  { name: "HTML", slug: "html5" },
   { name: "CSS", slug: "css3" },
+  { name: "HTML", slug: "html5" },
+  { name: "React", slug: "react" },
+  { name: "Python", slug: "python" },
+  { name: "NextJS", slug: "nextdotjs" },
   { name: "JavaScript", slug: "javascript" },
   { name: "TypeScript", slug: "typescript" },
-  { name: "React", slug: "react" },
-  { name: "NextJS", slug: "nextdotjs" },
-  { name: "Tailwind CSS", slug: "tailwindcss" },
-  { name: "Bootstrap", slug: "bootstrap" },
 ];
 
 // Dev Tools
 const devTools = [
-  // Version Control & Collaboration
   { name: "Git", slug: "git" },
-  { name: "Github", slug: "github" },
-
-  // API & Backend Services
-  { name: "Postman", slug: "postman" },
-  // { name: "Appwrite", slug: "appwrite" },
-
-  // UI & Design
-  { name: "Shadcn UI", slug: "shadcnui" },
-  { name: "Magic UI", slug: "magicui" },
-  { name: "Shadcn UI", slug: "shadcnui" },
-
-  // Development & Tooling
   { name: "Vite", slug: "vite" },
-
-  // Databases & ORM
-  // { name: "Prisma", slug: "prisma" },
-  // { name: "Drizzle ORM", slug: "drizzle" },
-
-  // Payment Gateways
-  // { name: "Stripe", slug: "stripe" },
-  // { name: "Lemon Squeezy", slug: "lemonsqueezy" },
+  { name: "NumPy", slug: "numpy" },
+  { name: "Pandas", slug: "pandas" },
+  { name: "Github", slug: "github" },
+  { name: "Vercel", slug: "vercel" },
+  { name: "Postman", slug: "postman" },
+  { name: "Appwrite", slug: "appwrite" },
+  { name: "Shadcn UI", slug: "shadcnui" },
+  { name: "Bootstrap", slug: "bootstrap" },
+  { name: "Tailwind CSS", slug: "tailwindcss" },
 ];
 
 const backEndIcons = backEndTech.map((tech) => ({
@@ -112,8 +94,8 @@ const StackList: React.FC<TechStackProps> = ({ items }) => (
 const TechStack = () => {
   return (
     <div className="relative">
-      <StackList items={backEndIcons} />
       <StackList items={frontEndIcons} />
+      <StackList items={backEndIcons} />
       <StackList items={devToolsIcons} />
     </div>
   );
