@@ -62,7 +62,7 @@ const Projects = [
     ],
     technologies: ["React.js", "TypeScript", "Shadcn UI", "Nebius AI Studio"],
 
-    link: "#",
+    link: "https://ai-image-generater-murex.vercel.app/",
     sourceCode: "https://github.com/Sumit262601/ImageAI",
   },
 ];
