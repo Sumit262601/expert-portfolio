@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import { allBlogs } from "content-collections";
+// import { allBlogs } from "content-collections";
 
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Mail } from "lucide-react";
@@ -14,7 +14,7 @@ import { Particles } from "@/components/magicui/particles";
 
 import TechStack from "./_components/tech-stack";
 import ProjectCard from "@/components/project-card";
-import BlogCard from "../blog/_components/blog-card";
+// import BlogCard from "../blog/_components/blog-card";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from "next/image";
 import { Ripple } from "@/components/magicui/ripple";
@@ -30,12 +30,12 @@ export default function Page() {
     setColor(theme === "dark" ? "#ffffff" : "#000000");
   }, [theme]);
 
-  const latestBlog = allBlogs
-    .sort(
-      (a, b) =>
-        new Date(b.publishedOn).getTime() - new Date(a.publishedOn).getTime()
-    )
-    .slice(0, 3);
+  // const latestBlog = allBlogs
+  //   .sort(
+  //     (a, b) =>
+  //       new Date(b.publishedOn).getTime() - new Date(a.publishedOn).getTime()
+  //   )
+  //   .slice(0, 3);
 
   const words = [
     {

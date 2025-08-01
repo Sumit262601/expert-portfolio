@@ -8,7 +8,10 @@ const Footer = () => {
   const { openModal } = useModalStore();
 
   return (
-    <footer className="border-t">
+    <footer className="border-t pt-16 p-10">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Let&apos;s Connect and Inspire Each Other!</h2>
+      </div>
       <div className="container flex flex-col justify-between gap-2 sm:flex-row py-3.5 w-full shrink-0 items-center px-4 md:px-6">
         <InteractiveHoverButton className="text-sm" onClick={openModal}>
           Get In Touch
