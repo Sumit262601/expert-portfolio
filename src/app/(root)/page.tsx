@@ -18,7 +18,7 @@ import BlogCard from "../blog/_components/blog-card";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from "next/image";
 import { Ripple } from "@/components/magicui/ripple";
-import { Logo } from "@/assets/index"
+import { Logo } from "@/assets/index";
 import { ExperiencesTimeline } from "./_components/experiences";
 // import { EducationStack } from "./_components/education";
 
@@ -75,10 +75,11 @@ export default function Page() {
               As a Front-End Developer, I design high-performance, responsive,
               and user-friendly web applications using modern technologies,
               clean code, and best practices for seamless user experiences.
-              Since the beginning of my journey, I&apos;ve been fascinated by how
-              code can bring ideas to life. I specialize in crafting intuitive,
-              responsive, and modern web experiences using technologies like
-              ReactJS, Tailwind CSS, PHP, MongoDB, MySQL, and more.
+              Since the beginning of my journey, I&apos;ve been fascinated by
+              how code can bring ideas to life. I specialize in crafting
+              intuitive, responsive, and modern web experiences using
+              technologies like ReactJS, Tailwind CSS, PHP, MongoDB, MySQL, and
+              more.
             </p>
           </div>
 
@@ -173,7 +174,7 @@ export default function Page() {
       <section className="container py-12 md:py-24">
         <div className="flex justify-between mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Latset Projects
+            Latest Projects
           </h2>
 
           <Link href={"/projects"} aria-label="See all projects">
@@ -188,7 +189,7 @@ export default function Page() {
       </section>
 
       {/* Recent Blog */}
-      <section className="container py-12 md:py-24">
+      {/* <section className="container py-12 md:py-24">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-12">
           Recent Blog
         </h2>
@@ -198,7 +199,7 @@ export default function Page() {
             <BlogCard key={blog.slug} {...blog} />
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

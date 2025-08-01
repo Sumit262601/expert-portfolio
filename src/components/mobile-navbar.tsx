@@ -24,7 +24,7 @@ const MobileNavigation = () => {
 
       <SheetContent side={"left"}>
         <SheetHeader className="text-left">
-          <SheetTitle>Ahmed Wael</SheetTitle>
+          <SheetTitle>Sumit Kumar</SheetTitle>
         </SheetHeader>
 
         <Button

@@ -23,7 +23,7 @@ const Projects = [
     ],
     technologies: ["Python", "yt-dlp", "tkinter", "ffmpeg"],
 
-    link: "#",
+    link: "",
     sourceCode: "https://github.com/Sumit262601/YT-Downlaoder",
   },
 

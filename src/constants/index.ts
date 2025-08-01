@@ -4,18 +4,19 @@ export const navbarLinks = [
     url: "/#about",
   },
   {
+    name: "Skills",
+    url: "/#skill",
+  },
+  {
     name: "Projects",
-    url: "/projects",
+    url: "/#projects",
   },
   {
     name: "Experience",
     url: "/#experience",
   },
-  {
-    name: "Blog",
-    url: "/blog",
-  },
 ];
+
 
 export const Categories = [
   "Programming",
