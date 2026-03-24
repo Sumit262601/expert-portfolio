@@ -62,9 +62,9 @@ export default function Page() {
       {/* About */}
       <section
         id="about"
-        className="flex flex-col lg:flex-row items-center justify-between py-24 px-6 sm:px-10 md:px-16 lg:px-26 gap-12"
+        className="container mx-auto flex flex-col items-center justify-between gap-10 px-4 py-14 sm:px-6 sm:py-16 md:gap-12 md:py-20 lg:flex-row lg:items-center lg:gap-16 lg:py-24"
       >
-        <div className="flex flex-col space-y-8 max-w-xl">
+        <div className="flex w-full max-w-2xl flex-col space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               Hi, I&apos;m Sumit
@@ -139,13 +139,13 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="relative flex h-[500px] w-full flex-col items-center justify-center">
+        <div className="relative flex h-[300px] w-full max-w-md flex-col items-center justify-center sm:h-[360px] md:h-[420px] lg:h-[500px]">
           <Image
             src={Logo}
             width={300}
             height={300}
             alt="Picture of the author"
-            className="z-10 rounded-full object-cover object-center w-96 h-96"
+            className="z-10 h-56 w-56 rounded-full object-cover object-center sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80"
           />
           <Ripple />
         </div>
@@ -171,9 +171,9 @@ export default function Page() {
       </section>
 
       {/* Latset Projects */}
-      <section className="container py-12 md:py-24">
+      <section id="projects" className="container py-12 md:py-24">
         <div className="flex justify-between mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Latest Projects
           </h2>
 

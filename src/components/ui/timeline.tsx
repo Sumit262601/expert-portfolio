@@ -43,39 +43,52 @@ const Timeline: React.FC = () => {
     {
       id: 1,
       title: "PHP Development Intern",
-      duration: "6 months",
-      period: "Feb 2024 - July 2024",
+      duration: "11 months",
+      company: "Virtual Education Trust",
+      period: "Feb 2024 – Dec 2024",
       achievements: [
-        "Developed a dynamic single-page website with admin panel for Sai-Prerna using CodeIgniter, demonstrating proficiency in responsive and user-friendly web design.",
-        "Enhanced performance and scalability of the application by applying industry best practices and optimizing load times.",
-        "Strengthened web development skills through real-world experience, focusing on CodeIgniter framework, MVC structure, and scalable solution implementation."
+        "Designed and developed a dynamic single-page website for Sai-Prerna using CodeIgniter.",
+        "Built responsive and user-centric web interfaces following modern UI/UX principles.",
+        "Implemented performance optimization techniques to improve website speed and efficiency.",
+        "Applied industry best practices and clean coding standards during development.",
+        "Developed scalable solutions to ensure smooth functionality and future enhancements.",
+        "Gained hands-on experience in web application architecture and real-world development workflows.",
       ]
     },
-    // {
-    //   id: 2,
-    //   title: "Frontend Developer",
-    //   duration: "8 months",
-    //   period: "Aug 2024 - Present",
-    //   achievements: [
-    //     "Built responsive React applications with modern UI/UX principles and component-based architecture.",
-    //     "Collaborated with cross-functional teams to deliver high-quality user interfaces and improved user experience.",
-    //     "Implemented state management solutions and optimized application performance for better user engagement."
-    //   ]
-    // }
+    {
+      id: 2,
+      title: "React Native Developer",
+      duration: "7 months",
+      company: "OffLens Studio",
+      period: "Aug 2025 - Feb 2026",
+      achievements: [
+        "Provided technical support for web and mobile applications, ensuring smooth functionality and a positive user experience.",
+        "Worked directly with React JS and React Native (Expo) to identify, debug, and resolve front-end and iOS application issues.",
+        "Assisted in the development, testing, and troubleshooting of iOS applications built using React Native and Expo framework.",
+        "Used Git and GitHub for version control and collaborated with the development team to track and resolve bugs.",
+        "Utilized Chrome Developer Tools and Expo debugging tools to analyze performance and resolve application errors.",
+        "Managed customer queries and technical tickets using Intercom.",
+        "Recognized for fast issue resolution, strong problem-solving skills, and effective client communication."
+      ]
+    }
   ];
 
   return (
     <div
       ref={containerRef}
       id="experience"
-      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 "
+      className="relative py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8"
     >
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-1/2 top-20 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl" />
+      </div>
+
       {/* Header */}
-      <div className="text-center mb-12 sm:mb-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 ">
+      <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-5">
           Experience
         </h2>
-        <p className="text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4 ">
+        <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
           A detailed overview of my professional journey,
           <br className="hidden sm:block" />
           highlighting key roles, achievements, and skills acquired.
@@ -83,47 +96,36 @@ const Timeline: React.FC = () => {
       </div>
 
       {/* Timeline Container */}
-      <div className="relative max-w-6xl mx-auto" ref={timelineRef}>
+      <div className="relative max-w-7xl mx-auto" ref={timelineRef}>
         {/* Centered Timeline Line */}
-        <div className="absolute left-4 sm:left-6 md:left-1/2 md:transform md:-translate-x-1/2 top-0 w-[3px] bg-gray-300 rounded-full h-full">
+        <div className="absolute left-2 sm:left-2 md:left-1/2 md:transform md:-translate-x-1/2 top-0 w-[2px] bg-border/80 rounded-full h-full">
           <div
-            className="w-[3px] bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-600 rounded-full transition-all duration-300 ease-out"
+            className="w-[2px] bg-gradient-to-b from-blue-500 via-indigo-500 to-violet-500 rounded-full transition-all duration-300 ease-out"
             style={{
               height: `${scrollProgress * 100}%`,
-              boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+              boxShadow: "0 0 18px rgba(59, 130, 246, 0.35)",
             }}
           />
         </div>
 
         {/* Timeline Items */}
         {experiences.map((experience, index) => {
-          const isEven = index % 2 === 0;
-          const itemProgress = scrollProgress * experiences.length - index;
-          // const isVisible = itemProgress > 0;
-          const nodeActive = itemProgress > 0.2;
-          const cardVisible = itemProgress > 0.4;
+          const isEven = index % 3 === 0;
+          const normalizedIndex = index / experiences.length;
+          const nodeActive = scrollProgress >= normalizedIndex - 0.2;
+          const cardVisible = scrollProgress >= normalizedIndex - 0.1;
 
           return (
             <div
               key={experience.id}
-              className={`relative pb-16 ${
-                // Mobile and small screens: all items on right
-                'pl-12 sm:pl-16 ' +
-                // Medium screens and up: alternating sides
-                'md:pl-0 ' +
-                (isEven 
-                  ? 'md:pr-1/2 md:pr-8 lg:pr-12' // Even items on left side
-                  : 'md:pl-1/2 md:pl-8 lg:pl-12'  // Odd items on right side
-                )
-              }`}
+              className="relative pb-16 sm:pb-20 pl-6 sm:pl-16 md:pl-0"
             >
               {/* Timeline Node */}
               <div
-                className={`absolute w-5 h-5 rounded-full border-4 transition-all duration-700 z-10 left-2 sm:left-4 md:left-1/2 top-6 md:-translate-x-1/2 ${
-                  nodeActive
-                    ? "bg-blue-600 border-white shadow-lg shadow-blue-500/40"
-                    : "bg-white border-gray-400"
-                }`}
+                className={`absolute w-5 h-5 rounded-full border-4 transition-all duration-700 z-10 left-2 sm:left-2 md:left-1/2 top-7 md:-translate-x-1/2 ${nodeActive
+                  ? "bg-blue-600 border-white shadow-lg shadow-blue-500/40"
+                  : "bg-background border-border"
+                  }`}
                 style={{
                   transform: `scale(${nodeActive ? 1.2 : 1})`,
                 }}
@@ -131,63 +133,61 @@ const Timeline: React.FC = () => {
 
               {/* Experience Card */}
               <div
-                className={`bg-gray-100 rounded-xl lg:rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-700 max-w-4xl ${
-                  // Mobile: all cards on right side
-                  '' +
-                  // Medium+: alternating sides with proper alignment
-                  (isEven 
-                    ? 'md:ml-auto md:mr-8 lg:mr-12'
-                    : 'md:mr-auto md:ml-8 lg:ml-12'
+                className={`group relative overflow-hidden rounded-2xl border border-border/70 bg-card/90 backdrop-blur-sm p-6 sm:p-7 lg:p-9 shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgb(0,0,0,0.14)] max-w-[92rem] md:max-w-5xl md:w-[calc(88%-1.25rem)] lg:w-[calc(50%-1.75rem)] ${
+                  (isEven
+                    ? 'md:mr-auto md:ml-0'
+                    : 'md:ml-auto md:mr-0'
                   ) +
                   // Animation states
                   (cardVisible
                     ? " opacity-100 translate-y-0"
                     : " opacity-0 translate-y-8")
-                }`}
+                  }`}
               >
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-blue-500/10 via-indigo-500/5 to-transparent" />
+
                 {/* Company Info */}
-                <div className="mb-6">
-                  <div className="flex items-center text-gray-600 gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="mb-6 relative z-10">
+                  <div className="inline-flex items-center text-muted-foreground gap-2.5 mb-4 rounded-full border border-border/70 bg-background/80 px-3.5 py-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Building2 className="text-white" size={20} />
                     </div>
-                    <span className="text-base lg:text-lg font-medium">
-                      {experience.duration}
-                    </span>
+                    <p className="text-base sm:text-lg text-muted-foreground font-medium">{experience.company}</p>
                   </div>
-                  <div className="text-gray-900">
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 leading-tight">
+                  <div className="text-foreground mt-4">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-tight tracking-tight">
                       {experience.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 font-medium flex items-center gap-2">
+                    <p className="text-base sm:text-lg text-muted-foreground font-medium flex items-center gap-2">
                       <CalendarDays size={16} className="flex-shrink-0" />
-                      <span>{experience.period}</span>
+                      <span> {experience.period} </span>
+                      <span> {experience.duration} </span>
                     </p>
                   </div>
                 </div>
 
                 {/* Achievements */}
-                <div className="space-y-4">
+                <div className="space-y-4 relative z-10">
                   {experience.achievements.map((achievement, achIndex) => (
                     <div
                       key={achIndex}
-                      className={`flex items-start gap-3 transition-all duration-700 ${
-                        cardVisible
-                          ? "opacity-100 translate-x-0"
-                          : "opacity-0 translate-x-4"
-                      }`}
+                      className={`flex items-start gap-3 transition-all duration-700 ${cardVisible
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 translate-x-4"
+                        }`}
                       style={{
                         transitionDelay: `${(achIndex + 1) * 100}ms`
                       }}
                     >
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2.5 flex-shrink-0" />
+                      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                         {achievement}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
+
             </div>
           );
         })}

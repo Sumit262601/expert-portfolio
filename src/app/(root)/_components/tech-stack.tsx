@@ -1,8 +1,8 @@
 import { Marquee } from "@/components/magicui/marquee";
-import Image from "next/image";
 
 interface TechItem {
   name: string;
+  slug: string;
   icon: string;
 }
 
@@ -67,18 +67,23 @@ const StackList: React.FC<TechStackProps> = ({ items }) => (
     <Marquee className="py-6" pauseOnHover={false}>
       <div className="flex gap-8">
         {items.map((tech, i) => (
-          <div key={i} className="relative group text-center">
+          <div key={`${tech.slug}-${i}`} className="relative group text-center">
             <div
               className="w-20 border h-20 bg-gradient-to-b rounded-2xl p-6 transition-all duration-300 
                         hover:scale-110 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]
                         flex items-center justify-center"
             >
-              <Image
+              <img
                 src={tech.icon}
                 alt={`${tech.name} logo`}
                 width={55}
                 height={55}
                 loading="lazy"
+                className="h-[55px] w-[55px] object-contain"
+                onError={(e) => {
+                  e.currentTarget.src =
+                    "https://cdn.simpleicons.org/devbox/F43F5E";
+                }}
               />
             </div>
             <span className="text-sm whitespace-nowrap">{tech.name}</span>

@@ -8,11 +8,11 @@ const Footer = () => {
   const { openModal } = useModalStore();
 
   return (
-    <footer className="border-t pt-16 p-10">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Let&apos;s Connect and Inspire Each Other!</h2>
+    <footer className="border-t px-4 py-10 sm:px-6 md:px-10">
+      <div className="text-center mb-6">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">Let&apos;s Connect and Inspire Each Other!</h2>
       </div>
-      <div className="container flex flex-col justify-between gap-2 sm:flex-row py-3.5 w-full shrink-0 items-center px-4 md:px-6">
+      <div className="container flex w-full shrink-0 flex-col items-center justify-between gap-3 px-2 py-2 sm:flex-row sm:px-4 md:px-6">
         <InteractiveHoverButton className="text-sm" onClick={openModal}>
           Get In Touch
         </InteractiveHoverButton>
