@@ -42,7 +42,20 @@ export default function Page() {
       text: "A",
     },
     {
-      text: "Front-End",
+      text: "Frontend",
+    },
+    {
+      text: "Developer",
+    },
+    {
+      text: "/",
+      className: "text-muted-foreground font-normal",
+    },
+    {
+      text: "React",
+    },
+    {
+      text: "Native",
     },
     {
       text: "Developer",
@@ -70,7 +83,13 @@ export default function Page() {
               Hi, I&apos;m Sumit
               <span className="ml-2">👋</span>
             </h1>
-            <TypewriterEffectSmooth words={words} />
+            <TypewriterEffectSmooth
+              words={words}
+              repeat
+              repeatDelay={2}
+              duration={3}
+              delay={1}
+            />
             <p className="text-balance text-muted-foreground text-lg">
               As a Front-End Developer, I design high-performance, responsive,
               and user-friendly web applications using modern technologies,
@@ -78,7 +97,7 @@ export default function Page() {
               Since the beginning of my journey, I&apos;ve been fascinated by
               how code can bring ideas to life. I specialize in crafting
               intuitive, responsive, and modern web experiences using
-              technologies like ReactJS, Tailwind CSS, PHP, MongoDB, MySQL, and
+              technologies like ReactJS, Tailwind CSS, PHP, MongoDB, React Native, MySQL, and
               more.
             </p>
           </div>
@@ -139,11 +158,11 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="relative flex h-[300px] w-full max-w-md flex-col items-center justify-center sm:h-[360px] md:h-[420px] lg:h-[500px]">
+        <div className="relative flex w-full max-w-full flex-col items-center justify-center sm:h-[360px] md:h-[650px] lg:h-[550px]">
           <Image
             src={Logo}
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             alt="Picture of the author"
             className="z-10 h-56 w-56 rounded-full object-cover object-center sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80"
           />

@@ -48,7 +48,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("font-sans antialiased relative", inter.className)}>
+      <body
+        suppressHydrationWarning
+        className={cn("font-sans antialiased relative", inter.className)}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

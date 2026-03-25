@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const TypewriterEffect = ({
   words,
@@ -102,6 +102,10 @@ export const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
+  repeat = false,
+  repeatDelay = 1,
+  duration = 2,
+  delay = 1,
 }: {
   words: {
     text: string;
@@ -109,6 +113,10 @@ export const TypewriterEffectSmooth = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  repeat?: boolean | number;
+  repeatDelay?: number;
+  duration?: number;
+  delay?: number;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -117,6 +125,52 @@ export const TypewriterEffectSmooth = ({
       text: word.text.split(""),
     };
   });
+
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: !repeat });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const el = scope.current as HTMLElement | null;
+    const contentWidth = contentRef.current?.scrollWidth ?? 0;
+    if (!el || contentWidth <= 0) return;
+
+    const shouldRepeat = Boolean(repeat);
+    const repeatCount =
+      typeof repeat === "number" ? Math.max(0, Math.floor(repeat) - 1) : Infinity;
+
+    if (!shouldRepeat) {
+      animate(
+        el,
+        { width: [`0px`, `${contentWidth}px`] },
+        { duration, ease: "linear", delay }
+      );
+      return;
+    }
+
+    // Typing: 0 -> full, hold for repeatDelay, then reset to 0 and repeat.
+    // We use keyframe "times" to keep the text fully visible during the hold.
+    const hold = Math.max(0, repeatDelay);
+    const resetDuration = 0.01; // near-instant reset; avoids some browsers skipping the last keyframe
+    const total = duration + hold + resetDuration;
+    const typingEnd = duration / total;
+    const holdEnd = (duration + hold) / total;
+
+    animate(
+      el,
+      { width: [`0px`, `${contentWidth}px`, `${contentWidth}px`, `0px`] },
+      {
+        duration: total,
+        ease: "linear",
+        delay,
+        times: [0, typingEnd, holdEnd, 1],
+        repeat: repeatCount,
+      }
+    );
+  }, [animate, delay, duration, isInView, repeat, repeatDelay, scope]);
+
   const renderWords = () => {
     return (
       <div>
@@ -143,20 +197,12 @@ export const TypewriterEffectSmooth = ({
     <div className={cn("flex space-x-1 my-6", className)}>
       <motion.div
         className="overflow-hidden pb-2"
-        initial={{
-          width: "0%",
-        }}
-        whileInView={{
-          width: "fit-content",
-        }}
-        transition={{
-          duration: 2,
-          ease: "linear",
-          delay: 1,
-        }}
+        ref={scope}
+        style={{ width: 0 }}
       >
         <div
-          className="text-xl sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-bold"
+          ref={contentRef}
           style={{
             whiteSpace: "nowrap",
           }}
@@ -178,7 +224,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-8 sm:h-6 xl:h-12 bg-blue-500",
+          "block rounded-sm w-[4px] h-5 sm:h-6 xl:h-8 bg-blue-500",
           cursorClassName
         )}
       ></motion.span>
