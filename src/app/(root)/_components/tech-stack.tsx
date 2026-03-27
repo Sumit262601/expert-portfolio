@@ -73,6 +73,7 @@ const StackList: React.FC<TechStackProps> = ({ items }) => (
                         hover:scale-110 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]
                         flex items-center justify-center"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={tech.icon}
                 alt={`${tech.name} logo`}

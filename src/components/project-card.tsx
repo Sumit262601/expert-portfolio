@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import { Code2, ExternalLink, Sparkles } from "lucide-react";
+import { Code2, Sparkles } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
