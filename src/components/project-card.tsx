@@ -6,7 +6,7 @@ import { Code2, ExternalLink, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Img1, Img3, Img4 } from "@/assets/index";
+import { Img1, Img3, Img4, Img5 } from "@/assets/index";
 
 
 const Projects = [
@@ -14,7 +14,7 @@ const Projects = [
     title: "AI-Powered Daily Task Manager",
     description:
       "This platform to help youtube video download in high quality and they also supported copyright video.",
-    logo: Img1,
+    logo: Img5,
     features: [
       "AI chat agent for intelligent task suggestions, prioritization, and productivity coaching",
       "Interactive calendar with weekly/monthly views for task scheduling and planning",
@@ -98,7 +98,7 @@ export default function ProjectCard() {
           <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-primary/10 blur-3xl" />
 
           <div className="grid items-start gap-6">
-            <section className="relative aspect-[16/8.5] w-[104%] -mx-[2%] rounded-xl border border-border/70 bg-background/70">
+            <section className="relative aspect-[16/10] w-[104%] -mx-[2%] rounded-xl border border-border/70 bg-background/70">
               <Image
                 src={project.logo}
                 fill
