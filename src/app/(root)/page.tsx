@@ -39,17 +39,13 @@ export default function Page() {
 
   const words = [
     {
-      text: "A",
+      text: "I'm",
     },
     {
       text: "Frontend",
     },
     {
-      text: "Developer",
-    },
-    {
-      text: "&",
-      className: "text-muted-foreground font-normal",
+      text: "&"
     },
     {
       text: "React",
