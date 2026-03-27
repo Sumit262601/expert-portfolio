@@ -48,7 +48,7 @@ export default function Page() {
       text: "Developer",
     },
     {
-      text: "/",
+      text: "&",
       className: "text-muted-foreground font-normal",
     },
     {
@@ -75,9 +75,9 @@ export default function Page() {
       {/* About */}
       <section
         id="about"
-        className="container mx-auto flex flex-col items-center justify-between gap-10 px-4 py-14 sm:px-6 sm:py-16 md:gap-12 md:py-20 lg:flex-row lg:items-center lg:gap-16 lg:py-24"
+        className="flex w-full flex-col items-center justify-center gap-10 px-8 md:gap-12 lg:flex-row lg:gap-16"
       >
-        <div className="flex w-full max-w-2xl flex-col space-y-8">
+        <div className="flex w-full max-w-2xl flex-col space-y-8 lg:max-w-none lg:flex-1">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               Hi, I&apos;m Sumit
@@ -91,14 +91,10 @@ export default function Page() {
               delay={1}
             />
             <p className="text-balance text-muted-foreground text-lg">
-              As a Front-End Developer, I design high-performance, responsive,
-              and user-friendly web applications using modern technologies,
-              clean code, and best practices for seamless user experiences.
-              Since the beginning of my journey, I&apos;ve been fascinated by
-              how code can bring ideas to life. I specialize in crafting
-              intuitive, responsive, and modern web experiences using
-              technologies like ReactJS, Tailwind CSS, PHP, MongoDB, React Native, MySQL, and
-              more.
+            Software Development graduate from Tata Institute of Social Sciences with 6 months of internship experience at OffLens as a React Native
+            Developer. Proficient in HTML, CSS, JavaScript, React, and React Native with hands-on experience in building responsive web applications using
+            Bootstrap and Tailwind CSS. Skilled in Git and GitHub for version control, along with strong technical troubleshooting, issue resolution, and
+            problem-solving abilities.  
             </p>
           </div>
 
@@ -158,7 +154,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="relative flex w-full max-w-full flex-col items-center justify-center sm:h-[360px] md:h-[650px] lg:h-[550px]">
+        <div className="relative col-span-1 flex w-full min-h-[320px] flex-col items-center justify-center overflow-hidden sm:min-h-[360px] md:min-h-[650px] lg:min-h-[550px] lg:flex-1">
           <Image
             src={Logo}
             width={400}

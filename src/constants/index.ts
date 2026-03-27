@@ -5,7 +5,7 @@ export const navbarLinks = [
   },
   {
     name: "Skills",
-    url: "/#skill",
+    url: "/#skills",
   },
   {
     name: "Projects",

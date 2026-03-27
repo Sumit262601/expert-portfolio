@@ -11,6 +11,26 @@ import { Img1, Img3, Img4 } from "@/assets/index";
 
 const Projects = [
   {
+    title: "AI-Powered Daily Task Manager",
+    description:
+      "This platform to help youtube video download in high quality and they also supported copyright video.",
+    logo: Img1,
+    features: [
+      "AI chat agent for intelligent task suggestions, prioritization, and productivity coaching",
+      "Interactive calendar with weekly/monthly views for task scheduling and planning",
+      "Detailed statistics dashboard with daily/monthly/yearly breakdowns of task completion trends",
+      "User authentication (email/password & Apple Sign-In) via Supabase",
+      "In-app subscriptions (weekly, monthly, yearly) integrated with RevenueCat for iOS & Android",
+      "Push notifications and calendar sync for task reminders",
+      "Customizable user profiles with avatar support",
+      "Onboarding flow and paywall with App Store-compliant legal disclosures",
+    ],
+    technologies: ["React Native", "Expo", "Supabase", "RevenueCat"],
+
+    link: "",
+    sourceCode: "https://github.com/Sumit262601/Voxi-AI-Task-Manager",
+  },
+  {
     title: "Youtube Downloader",
     description:
       "This platform to help youtube video download in high quality and they also supported copyright video.",
@@ -69,22 +89,22 @@ const Projects = [
 
 export default function ProjectCard() {
   return (
-    <div className="space-y-8 md:space-y-10">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {Projects.map((project) => (
         <div
           key={project.title}
-          className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card/40 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-border hover:shadow-lg sm:p-6 lg:p-8"
+          className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card/40 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-border hover:shadow-lg sm:p-6"
         >
           <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-primary/10 blur-3xl" />
 
-          <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-8">
-            <section className="overflow-hidden rounded-xl border border-border/70 bg-background/70">
+          <div className="grid items-start gap-6">
+            <section className="relative aspect-[16/8.5] w-[104%] -mx-[2%] rounded-xl border border-border/70 bg-background/70">
               <Image
                 src={project.logo}
-                width={1280}
-                height={720}
+                fill
                 alt={`${project.title} preview`}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="h-full w-full object-cover"
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
             </section>
 
@@ -131,15 +151,15 @@ export default function ProjectCard() {
               </div>
 
               <div className="flex flex-wrap gap-3 pt-1">
-                <Link href={project.link} target="_blank" rel="noreferrer">
-                  <Button className="w-full lg:w-fit">
+                {/* <Link href={project.link} target="_blank" rel="noreferrer">
+                  <Button className="w-full">
                     <ExternalLink />
                     Live Demo
                   </Button>
-                </Link>
+                </Link> */}
 
                 <Link href={project.sourceCode} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="w-full lg:w-fit">
+                  <Button className="w-full">
                     <Code2 />
                     View Code
                   </Button>
